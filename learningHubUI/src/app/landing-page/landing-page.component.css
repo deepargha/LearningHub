@@ -1,0 +1,21 @@
+/* commented #registration {
+    background-image: url("../../assets/images/learninghub.jpg");
+    background-repeat: no-repeat;
+    /*background-size: auto;
+    background-color: bisque;
+    background-size: 400px 500px;
+    top:-60px; 
+    left:35px; 
+    position:relative;
+    z-index: 1;
+}*/
+
+#regForm {
+    border: 3px solid rgb(141, 141, 165);  
+    background-size: 300px 100px;
+    padding-left: 75px;
+    top:60px; 
+    left:35px; 
+    position:relative;
+    z-index: 2;
+}
