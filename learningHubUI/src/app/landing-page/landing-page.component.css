@@ -1,14 +1,12 @@
-/* commented #registration {
-    background-image: url("../../assets/images/learninghub.jpg");
-    background-repeat: no-repeat;
-    /*background-size: auto;
+ /* body {
+    
     background-color: bisque;
-    background-size: 400px 500px;
-    top:-60px; 
+   /*background-size: auto;
+    /*top:-60px; 
     left:35px; 
     position:relative;
     z-index: 1;
-}*/
+}
 
 #regForm {
     border: 3px solid rgb(141, 141, 165);  
@@ -18,4 +16,289 @@
     left:35px; 
     position:relative;
     z-index: 2;
+}
+
+#navbar{
+    background-size:auto;
+} */
+
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #384607;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+  }
+  
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+  .jumbotron {
+  background-color: #f4511e; /* Orange */
+  color: #ffffff;
+  padding: 100px 25px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.logo {
+    font-size: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+  /* Add an orange color to all icons and set the font-size */
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+
+  .heart {
+    color: #f4511e;
+    
+  }
+
+  .power {
+    color: #c51515;
+    
+  }
+  .job {
+    color: #17d696c8;
+    
+  }
+  .leaf {
+    color: #17c93bc8;
+    
+  }
+  .cert {
+    color: #ab17c9c8;
+    
+  }
+  .hard {
+    color: #96a909c8;
+    
+  }
+  #values{
+    background-color: aliceblue;
+  }
+  #contact{
+    background-color: aliceblue;
+}
+#pricing{
+  background-color: aliceblue;
+}
+#login{
+  background-color: aliceblue;
+}
+/* login*/
+body {
+  /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* style the container */
+#login{
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn1 {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn1:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+#searchbtn{
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 2px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 12px;
+  text-decoration: none; /* remove underline from anchors */
+}
+ 
+/*courses cards*/
+.panel {
+  border: 1px solid #f4511e;
+  border-radius:0;
+  transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.panel-footer .btn:hover {
+  border: 1px solid #f4511e;
+  background-color: #fff !important;
+  color: #f4511e;
+}
+
+.panel-heading {
+  color: #fff !important;
+  background-color: #f4511e !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+  background-color: #fff !important;
+}
+
+.panel-footer h3 {
+  font-size: 32px;
+}
+
+.panel-footer h4 {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.panel-footer .btn {
+  margin: 15px 0;
+  background-color: #f4511e;
+  color: #fff;
 }

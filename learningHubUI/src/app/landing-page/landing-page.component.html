@@ -1,14 +1,340 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!--NAVBAR-->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="500">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><i class="fa fa-fw fa-home"></i>Learning Hub</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT<i class="fa fa-fw fa-question"></i></a></li>
+          <li><a href="#services"><i class="fa fa-fw fa-certificate"></i>SERVICES</a></li>
+          <!--<li><a href="#portfolio">PORTFOLIO</a></li>-->
+          <li><a href="#pricing"><i class="fa fa-fw fa-book"></i>COURSES</a></li>
+          <li><a href="#contact"><i class="fa fa-fw fa-envelope"></i>CONTACT</a></li>
+         <li><a href="#login"><i class="fa fa-fw fa-user"></i>LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--FORM AND WELCOME TEXT-->
+  <div class="jumbotron text-center">
+
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="search courses">
+      
+      <div class="input-group-btn">
+        <button type="button" id="searchbtn" class="btn btn-success">Search</button>
+      </div>
+    </div>
+  </form>
+    <h2><span typingAnimator 
+      [sentences]="['Welcome to Learning Hub,Learn a new Skill to advance your career']">
+</span></h2>
+    <p>Register Now!</p>
+    <form class="form-inline">
+      <div class="input-group">
+        <input type="text" class="form-control" size="30" placeholder="Name" required><br><br>
+        <input type="email" class="form-control" size="30" placeholder="Email Address" required><br><br>
+        <input type="password" class="form-control" size="30" placeholder="password" required><br><br>
+        <div>
+          <button type="button" id="regbtn" class="btn btn-danger">Subscribe</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--courses cards-->
+  <div class="container-fluid" id="pricing">
+    <div class="text-center">
+      <h2>Courses</h2>
+      <h4>Choose a course that you want to learns</h4>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Languages</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>C</strong></p>
+            <p><strong>CPP</strong></p>
+            <p><strong>JAVA</strong></p>
+            <p><strong>Python</strong> </p>
+            <p><strong>Ruby</strong></p>
+          </div>
+          <div class="panel-footer">
+            <h3>$00</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Algorithms</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>AAA</strong> </p>
+            <p><strong>BBB</strong> </p>
+            <p><strong>CCC</strong> </p>
+            <p><strong>DDD</strong> </p>
+            <p><strong>EEE</strong></p>
+          </div>
+          <div class="panel-footer">
+            <h3>$00</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+     <div class="col-sm-4">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>Data Structure</h1>
+          </div>
+          <div class="panel-body">
+            <p><strong>AAA</strong> </p>
+            <p><strong>BBB</strong> </p>
+            <p><strong>CCC</strong> </p>
+            <p><strong>DDD</strong> </p>
+            <p><strong>EEE</strong></p>
+          </div>
+          <div class="panel-footer">
+            <h3>$00</h3>
+            <h4>per month</h4>
+            <button class="btn btn-lg">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--About-->
+  <div class="container-fluid" id="about">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>About Company Page</h2>
+        <h4>Lorem ipsum..</h4>
+        <p>Lorem ipsum..</p>
+        <button class="btn btn-default btn-lg">Get in Touch</button>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <!--Our Values-->
+  <div class="container-fluid" id="values">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe logo"></span>
+      </div>
+      <div class="col-sm-8">
+        <h2>Our Values</h2>
+        <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+        <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+      </div>
+    </div>
+  </div>
+
+  <!--services-->
+  <div class="container-fluid text-center" id="services">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-off power"></span>
+        <h4>POWER</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart heart"></span>
+        <h4>LOVE</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-lock job"></span>
+        <h4>JOB DONE</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      </div>
+      <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf leaf"></span>
+        <h4>GREEN</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate cert"></span>
+        <h4>CERTIFIED</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench hard"></span>
+        <h4>HARD WORK</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+    </div>
+  </div>
+<!--login-->
+  <div class="container" id="login">
+    <form action="">
+      <div class="row">
+        <h2 style="text-align:center">Login with Social Media or Manually</h2>
+        <div class="vl">
+          <span class="vl-innertext">or</span>
+        </div>
+  
+        <div class="col">
+          <a href="#" class="fb btn1">
+            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+          </a>
+          <a href="#" class="twitter btn1">
+            <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+          </a>
+          <a href="#" class="google btn1">
+            <i class="fa fa-google fa-fw"></i> Login with Google+
+          </a>
+        </div>
+  
+        <div class="col">
+          <div class="hide-md-lg">
+            <p>Or sign in manually:</p>
+          </div>
+  
+          <input type="text" name="username" placeholder="Username" id="l1" required>
+          <input type="password" name="password" placeholder="Password" id="l2" required>
+          <input type="submit" value="Login" id="loginbtn">
+        </div>
+  
+      </div>
+    </form>
+  </div>
+  
+  <div class="bottom-container">
+    <div class="row">
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Sign up</a>
+      </div>
+      <div class="col">
+        <a href="#" style="color:white" class="btn">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+
+  <!--contact-->
+  <div class="container-fluid bg-grey" id="contact">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Durgapur, India</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +918514953478</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> arghadeepa9495@gmail.com</p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Registration Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
- 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body> 
+<body>
+  <div id="navbar" class="container">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Learning Hub</a>
+        <li class="active"><a href="#">Home</a></li>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> About</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav> 
+</div>
   <div class="container" id="registration">
     <div class="card bg-dark">
       <img src="https://mdbcdn.b-cdn.net/img/new/slides/017.webp" class="card-img" alt="Stony Beach"/>
@@ -44,4 +370,4 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> -->

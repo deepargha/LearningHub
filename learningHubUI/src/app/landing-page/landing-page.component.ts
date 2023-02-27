@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  start: boolean = false
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => this.start = true, 1000)
+
   }
 
 }
