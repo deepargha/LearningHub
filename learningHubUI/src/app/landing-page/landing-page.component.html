@@ -52,16 +52,72 @@
       [sentences]="['Welcome to Learning Hub,Learn a new Skill to advance your career']">
 </span></h2>
     <p>Register Now!</p>
-    <form class="form-inline">
+    <!-- <form [formGroup]="registrationForm">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" formControlName="firstName">
+    
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" formControlName="lastName">
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password">
+    
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" formControlName="confirmPassword">
+    
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+    </form> -->
+    <!-- <form class="form-inline">
       <div class="input-group">
-        <input type="text" class="form-control" size="30" placeholder="Name" required><br><br>
+        <input type="text" class="form-control" id="name" formControlName="name" size="30" placeholder="Name" required><br><br>
         <input type="email" class="form-control" size="30" placeholder="Email Address" required><br><br>
         <input type="password" class="form-control" size="30" placeholder="password" required><br><br>
         <div>
           <button type="button" id="regbtn" class="btn btn-danger">Subscribe</button>
         </div>
       </div>
+    </form>  -->
+    <!-- <form class="form-inline" [formGroup]="registrationForm">
+      <div class="input-group">
+        <input type="text" class="form-control" id="name" formControlName="name" size="30" placeholder="Name"><br><br>
+        <input type="email" class="form-control" formControlName="email" size="30" placeholder="Email Address"><br><br>
+        <input type="password" class="form-control" formControlName="password" size="30" placeholder="password"><br><br>
+        <div>
+          <button type="button" id="regbtn" class="btn btn-danger" [disabled]="registrationForm.invalid">Subscribe</button>
+        </div>
+      </div>
+    </form> -->
+    <form class="form-inline" [formGroup]="registrationForm">
+      <div class="input-group">
+        <input type="text" class="form-control" id="name" formControlName="name" size="30" placeholder="Name">
+        <div *ngIf="registrationForm.controls['name'].invalid && (registrationForm.controls['name'].dirty || registrationForm.controls['name'].touched)" class="alert alert-danger">
+          Name is required.
+          <!--<div *ngIf="registrationForm.get('name')?.hasError('required')">Name is required.</div>-->
+
+        </div>
+        <br><br>
+        <input type="email" class="form-control" formControlName="email" size="30" placeholder="Email Address">
+        <div *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)" class="alert alert-danger">
+          <div *ngIf="registrationForm.controls['email'].errors && registrationForm.controls['email'].errors['required']">Email is required.</div>
+          <div *ngIf="registrationForm.controls['email'].errors && registrationForm.controls['email'].errors['email']">Email is invalid.</div>
+        </div>
+        <br><br>
+        <input type="password" class="form-control" formControlName="password" size="30" placeholder="password">
+        <div *ngIf="registrationForm.controls['password'].invalid && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)" class="alert alert-danger">
+          <div *ngIf="registrationForm.controls['password'].errors && registrationForm.controls['password'].errors['required']">Password is required.</div>
+          <div *ngIf="registrationForm.get('password')?.hasError('minlength')" class="invalid-feedback">Password must be at least 8 characters long.</div>
+        </div>
+        <br><br>
+        <div>
+          <button type="submit" id="regbtn" class="btn btn-danger" [disabled]="registrationForm.invalid">Subscribe</button>
+        </div>
+      </div>
     </form>
+    
+    
   </div>
   <!--courses cards-->
   <div class="container-fluid" id="pricing">

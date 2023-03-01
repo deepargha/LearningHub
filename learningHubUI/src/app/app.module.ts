@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TypingAnimatorModule  } from "angular-typing-animator";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TypingAnimatorModule  } from "angular-typing-animator";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TypingAnimatorModule
+    TypingAnimatorModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
