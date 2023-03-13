@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl, NgForm } from '@angular/forms';
 import { User } from 'src/user';
+import { LoginRegistrationService } from '../login-registration.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class LandingPageComponent implements OnInit {
   usersList: any[] = [];
   errorMsg:string | undefined;
   user2:User = new User();
-
+  regService!:LoginRegistrationService;
   constructor(private formBuilder: FormBuilder) { 
     this.registrationForm = this.formBuilder.group({
       name: ['', Validators.required],
@@ -29,13 +30,13 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => this.start = true, 1000);
-    this.user2.name="abc";
-    this.user2.email="abc@gmail.com";
-    this.user2.password="12345678";
-    this.usersList.push(this.user2);
-    for(const user of this.usersList){
-      console.log(user);
-    }
+    // this.user2.name="abc";
+    // this.user2.email="abc@gmail.com";
+    // this.user2.password="12345678";
+    // this.usersList.push(this.user2);
+    // for(const user of this.usersList){
+    //   console.log(user);
+    // }
   }
 
   saveUser(){
@@ -44,16 +45,20 @@ export class LandingPageComponent implements OnInit {
       this.errorMsg='This email already exists!';
     }*/
     
-    for(const email of this.usersList){
-      console.log(email);
-      if(email.email==this.user.email){
-        this.errorMsg='This email already exists!';
+    // for(const email of this.usersList){
+    //   console.log(email);
+    //   if(email.email==this.user.email){
+    //     this.errorMsg='This email already exists!';
+    //   }
+    //   else{
+    //     this.usersList.push(this.user);
+    //   }
+    // }
+    this.regService.saveUser(this.user).subscribe((response:any) => {
+      if(response.status=='OK'){
+        console.log('Registration successful')
       }
-      else{
-        this.usersList.push(this.user);
-      }
-    }
-    
+    });
     console.log(this.user);
   }
 
